@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2025-04-29
 // @description  Autorefresh Twitch directory and automatically click away pending drops notifications
-// @icon           https://www.google.com/s2/favicons?domain=www.twitch.tv
+// @icon         https://www.google.com/s2/favicons?domain=www.twitch.tv
 // @author       esdeka
 // @match        https://www.twitch.tv/*
 // @grant        none
