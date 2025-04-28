@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Twitch Directory AutoRefresh
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      2025-04-28
 // @description  Autorefresh Twitch directory and automatically click away pending drops notifications
-// @author       sdk
+// @author       esdeka
 // @match        https://www.twitch.tv/*
 // @grant        none
-// @homepage     https://greasyfork.org/en/scripts/496422-twitch-directory-auto-refresh
+// @downloadURL  https://github.com/esdeka/esdeka_userscripts/raw/refs/heads/main/Twitch_Directory_AutoRefresh.user.js
 // ==/UserScript==
  
 (function() {
