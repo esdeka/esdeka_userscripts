@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Twitch Directory AutoRefresh
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-28
+// @version      2025-04-29
 // @description  Autorefresh Twitch directory and automatically click away pending drops notifications
 // @author       esdeka
 // @match        https://www.twitch.tv/*
 // @grant        none
-// @downloadURL  https://github.com/esdeka/esdeka_userscripts/raw/refs/heads/main/Twitch_Directory_AutoRefresh.user.js
+// @downloadURL  https://raw.githubusercontent.com/esdeka/esdeka_userscripts/refs/heads/main/Twitch_Directory_AutoRefresh.user.js
 // ==/UserScript==
  
 (function() {
