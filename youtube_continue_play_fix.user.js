@@ -1,21 +1,14 @@
 // ==UserScript==
 // @name               youtube continue play fix
-// @name:zh-CN         youtube继续播放
-// @name:zh-TW         youtube繼續播放
-// @name:ja            youtube再生自動継続
-// @description        When "Video paused, do you want to continue watching?" Appears, ignore it and continue playing automatically
-// @description:zh-TW  當出現"影片已暫停，要繼續觀賞嗎？"時忽略它繼續播放
-// @description:zh-CN  当出现"影片已暂停，要继续观赏吗？"时忽略它继续播放
-// @description:ja    「動画が一時停止されました。続きを視聴しますか？」が表示されても無視して再生を続けます
-// @namespace          https://greasyfork.org/zh-TW/users/461233-jack850628
-// @version            1.21.231207
-// @author             jack850628
+// @description        When "Video paused, do you want to continue watching?" Appears, ignore it and continue playing automatically (hiding dialog fixed)
+// @namespace          https://greasyfork.org/en/users/1308740-esdeka
+// @version            2025-04-28
+// @author             esdeka
 // @include            https://*.youtube.com/*
 // @noframes
 // @run-at             document-end
 // @license            MIT
-// @downloadURL https://update.greasyfork.org/scripts/398142/youtube%20continue%20play.user.js
-// @updateURL https://update.greasyfork.org/scripts/398142/youtube%20continue%20play.meta.js
+// @downloadURL        https://raw.githubusercontent.com/esdeka/esdeka_userscripts/refs/heads/main/youtube_continue_play_fix.user.js
 // ==/UserScript==
 
 (function() {
@@ -27,7 +20,8 @@
                 (
                     ytConfirmDialog.parentElement.style.display != 'none' ||
                     (
-                        document.hidden
+                        //document.hidden
+                        ytConfirmDialog.parentElement.style.display = 'none'
                     )//當網頁不可見時，DOM元件不會即時渲染，所以對話方塊的display還會是none
                 )
             ){
