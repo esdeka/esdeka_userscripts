@@ -5,6 +5,7 @@
 // @description  Autorefresh Twitch directory and automatically click away pending drops notifications
 // @icon         https://www.google.com/s2/favicons?domain=www.twitch.tv
 // @author       esdeka
+// @license      MIT
 // @match        https://www.twitch.tv/*
 // @grant        none
 // @downloadURL  https://raw.githubusercontent.com/esdeka/esdeka_userscripts/refs/heads/main/Twitch_Directory_AutoRefresh.user.js
