@@ -1,4 +1,5 @@
 // @require      https://code.jquery.com/jquery-3.7.1.min.js
+// @require      https://raw.githubusercontent.com/esdeka/esdeka_userscripts/refs/heads/main/snippets.js
 // ==/UserScript==
 /* global $, jQuery */
 
