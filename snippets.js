@@ -54,13 +54,9 @@ const setNativeValue = function(element, value) {
     // 	element.dispatchEvent(new Event('change', {bubbles: true})); // usually not needed
 }
 
-
-// else if (window.location.pathname == "/Account/Login") {
-//     let deletePrevious = document.querySelector('.validation-summary-errors')?.textContent == "Invalid login attempt."
-//     document.querySelector('#UserName').value = promptDefault("auser", deletePrevious);
-//     document.querySelector('#Password').value = promptDefault("pwoord", deletePrevious);
-//     document.querySelector('#RememberMe').checked = true;
-//     document.querySelector('.btn').click();
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_deleteValue
 const promptDefault = function ( key, deletePrevious ) {
     if (deletePrevious) {
     GM_deleteValue(key)
@@ -70,3 +66,9 @@ const promptDefault = function ( key, deletePrevious ) {
     }
     return GM_getValue(key)
 }
+// else if (window.location.pathname == "/Account/Login") {
+//     let deletePrevious = document.querySelector('.validation-summary-errors')?.textContent == "Invalid login attempt."
+//     document.querySelector('#UserName').value = promptDefault("auser", deletePrevious);
+//     document.querySelector('#Password').value = promptDefault("pwoord", deletePrevious);
+//     document.querySelector('#RememberMe').checked = true;
+//     document.querySelector('.btn').click();
