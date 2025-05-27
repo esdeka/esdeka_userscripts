@@ -3,8 +3,8 @@
 // ==/UserScript==
 /* global $, jQuery */
 
-const docQuery = document.querySelector
-const docQueryAll = document.querySelector
+const DQ = function(selectors) { return document.querySelector(selectors) }
+const DQA = function(selectors) { return document.querySelectorAll(selectors) }
 
 // (async function() {
 //     'use strict';
