@@ -9,10 +9,21 @@ const DQA = function(selectors) { return document.querySelectorAll(selectors) }
 // (async function() {
 //     'use strict';
 const waitForElement = async (all_selectors, rootElement = document) => {
+    if (!rootElement)
+      rootElement = document;
+
     return new Promise((resolve) => {
+
+        for (const selector of all_selectors) {
+            const element = rootElement.querySelector(selector);
+            if (element) {
+                resolve([selector,element]);
+            }
+        }
+
         const observer = new MutationObserver(() => {
             for (const selector of all_selectors) {
-                const element = document.querySelector(selector);
+                const element = rootElement.querySelector(selector);
                 if (element) {
                     observer.disconnect();
                     resolve([selector,element]);
@@ -26,20 +37,24 @@ const waitForElement = async (all_selectors, rootElement = document) => {
         });
     });
 };
+
     // while (selectors.length > 0 && window.location.host=='login.microsoftonline.com') {
     //     var [selector, element] = await waitForElement(selectors);
     //     console.log('microauth.user.js','found', selector, element);
 
 
 const setNativeValue = function(element, value) {
+  console.log('setNativeValue', element, value)
     // https://www.reddit.com/r/javascript/comments/4is6xj/tampermonkey_and_reactjs/idwm91a/
     // https://stackoverflow.com/questions/30683628/react-js-setting-value-of-input/52486921#52486921
     // https://stackoverflow.com/questions/75314383/tampermonkey-enters-values-into-web-form-but-are-cleared-on-submit
     // https://developer.mozilla.org/en-US/docs/Web/API/Event/isTrusted
     // https://stackoverflow.com/questions/57879322/how-can-i-enter-data-into-a-custom-handled-input-field/57900849#57900849
-    let lastValue = element.value;
+    // let lastValue = element.value;
     //     element.value = value;
+
     element.focus()
+    element.click()
     //     document.execCommand('selectAll');
     document.execCommand('insertText', false, value);
     //     let event = new Event("input", { target: element, bubbles: true });
