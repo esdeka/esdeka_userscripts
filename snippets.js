@@ -8,7 +8,7 @@ const DQA = function(selectors) { return document.querySelectorAll(selectors) }
 
 // (async function() {
 //     'use strict';
-const waitForElement = async (all_selectors, rootElement = document.documentElement) => {
+const waitForElement = async (all_selectors, rootElement = document) => {
     return new Promise((resolve) => {
         const observer = new MutationObserver(() => {
             for (const selector of all_selectors) {
