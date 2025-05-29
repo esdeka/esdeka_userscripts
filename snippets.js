@@ -87,3 +87,11 @@ const promptDefault = function ( key, deletePrevious ) {
 //     document.querySelector('#Password').value = promptDefault("pwoord", deletePrevious);
 //     document.querySelector('#RememberMe').checked = true;
 //     document.querySelector('.btn').click();
+
+
+const triggerMouseEvent = function (node, eventType) {
+  var clickEvent = document.createEvent ('MouseEvents');
+  clickEvent.initEvent (eventType, true, true);
+  node.dispatchEvent (clickEvent);
+}
+              // triggerMouseEvent(node.querySelector('.soundOff'), 'click')
